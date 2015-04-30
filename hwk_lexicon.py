@@ -9,7 +9,7 @@ LEXI_DICT = {
 
     "day_modifier": ["tomorrow", "next", "soon"],
 
-    "stop": ["is", "has", "have", "that"],
+    "stop": ["by", "is", "has", "have", "that"],
 
     "key": ["due", "do", "optional", "mandatory"]
 
