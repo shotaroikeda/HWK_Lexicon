@@ -98,6 +98,20 @@ def process(sentence_list, search_list):
     return (ids, modifiers, weeks, key, desc)
 
 
+def remove_ids(ids, desc):
+    for _id in ids:
+        try:
+            if LEXI_DICT.get('id').index(_id):
+                continue
+        except IndexError:
+            print "changing %s" % (_id)
+            index_id = ids.index(_id)
+            desc.prepend(_id)
+            ids.insert(index_id, "homework")
+
+    return (ids, desc)
+
+
 def check_for_id(id_list):
     try:
         return id_list.index('id')
